@@ -1,0 +1,17 @@
+{
+  "name": "Endroid",
+  "short_name": "Endroid",
+  "description": "Endroid Dashboard and hub for all Endroid projects",
+  "start_url": "/Endroid/",
+  "scope": "/Endroid/",
+  "display": "standalone",
+  "background_color": "#FEF7FF",
+  "theme_color": "#6750A4",
+  "icons": [
+    {
+      "src": "/Endroid/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}
