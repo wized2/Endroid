@@ -3,256 +3,695 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Endroid</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded" rel="stylesheet">
+  <title>Endroid Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icon.png" type="image/png">
   <style>
     :root {
-      --md-sys-color-primary: #03dac6;
-      --md-sys-color-primary-container: #018786;
-      --md-sys-color-on-primary: #000000;
-      --md-sys-color-secondary: #6200ea;
-      --md-sys-color-surface: #121212;
-      --md-sys-color-surface-container: #1e1e1e;
-      --md-sys-color-on-surface: #ffffff;
-      --md-sys-color-outline: #03dac6;
-      --md-sys-color-shadow: rgba(0,0,0,0.4);
+      /* Milky Blue Color Palette - Dark Theme */
+      --md-sys-color-primary: #7CB9E8; /* Milky Blue */
+      --md-sys-color-primary-variant: #B0E0E6; /* Powder Blue */
+      --md-sys-color-secondary: #72A0C1; /* Air Force Blue */
+      --md-sys-color-secondary-variant: #5D8AA8; /* USAFA Blue */
+      --md-sys-color-tertiary: #89CFF0; /* Baby Blue */
+      --md-sys-color-tertiary-variant: #B0E0E6;
+      --md-sys-color-surface: #0F1621; /* Dark Blue-Gray */
+      --md-sys-color-surface-container: #1A2332;
+      --md-sys-color-surface-container-high: #243143;
+      --md-sys-color-on-surface: #E6F0FF; /* Milky Light Blue */
+      --md-sys-color-outline: #7CB9E8;
+      --md-sys-color-shadow: rgba(12, 20, 31, 0.5);
+      --md-sys-color-gradient-start: #7CB9E8;
+      --md-sys-color-gradient-end: #5D8AA8;
+      
+      /* Typography Scale */
+      --md-sys-typescale-display-large: 57px;
       --md-sys-typescale-title-large: 22px;
+      --md-sys-typescale-title-medium: 18px;
       --md-sys-typescale-body-large: 16px;
+      --md-sys-typescale-body-medium: 14px;
+      --md-sys-typescale-label-large: 14px;
+      
+      /* Motion & Effects */
       --md-sys-motion-easing: cubic-bezier(0.2, 0, 0, 1);
+      --md-sys-motion-duration: 400ms;
+      --md-sys-motion-scale: 1;
+      
+      /* Dynamic Glass Effect */
+      --glass-blur: 12px;
+      --glass-border: rgba(124, 185, 232, 0.15);
+      --glass-background: rgba(26, 35, 50, 0.8);
+      
+      /* Custom Properties for Animation */
+      --float-animation: float 6s ease-in-out infinite;
+      --pulse-animation: pulse 3s ease-in-out infinite;
+      --gradient-animation: gradient-shift 8s ease infinite;
+      --neon-glow: 0 0 25px rgba(124, 185, 232, 0.4);
+      --frost-glow: 0 0 30px rgba(176, 224, 230, 0.3);
     }
+    
     [data-theme="light"] {
-      --md-sys-color-primary: #018786;
-      --md-sys-color-primary-container: #03dac6;
-      --md-sys-color-on-primary: #ffffff;
-      --md-sys-color-secondary: #6200ea;
-      --md-sys-color-surface: #f9f9f9;
-      --md-sys-color-surface-container: #ffffff;
-      --md-sys-color-on-surface: #121212;
-      --md-sys-color-outline: #018786;
-      --md-sys-color-shadow: rgba(0,0,0,0.12);
+      /* Milky Blue Color Palette - Light Theme */
+      --md-sys-color-primary: #5D8AA8; /* USAFA Blue */
+      --md-sys-color-primary-variant: #7CB9E8; /* Milky Blue */
+      --md-sys-color-secondary: #72A0C1;
+      --md-sys-color-secondary-variant: #89CFF0;
+      --md-sys-color-tertiary: #B0E0E6; /* Powder Blue */
+      --md-sys-color-surface: #F8FBFF; /* Milky Light Blue Background */
+      --md-sys-color-surface-container: #FFFFFF;
+      --md-sys-color-surface-container-high: #F0F7FF;
+      --md-sys-color-on-surface: #1A365D; /* Deep Blue Text */
+      --md-sys-color-outline: #7CB9E8;
+      --md-sys-color-shadow: rgba(124, 185, 232, 0.15);
+      --md-sys-color-gradient-start: #5D8AA8;
+      --md-sys-color-gradient-end: #89CFF0;
+      --glass-background: rgba(255, 255, 255, 0.85);
+      --glass-border: rgba(124, 185, 232, 0.2);
+      --neon-glow: 0 0 20px rgba(93, 138, 168, 0.2);
+      --frost-glow: 0 0 25px rgba(176, 224, 230, 0.2);
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
+    
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Inter', sans-serif;
       background: var(--md-sys-color-surface);
       color: var(--md-sys-color-on-surface);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      overflow-x: hidden; /* Fixed: Only horizontal hidden, vertical scrolls */
-      overflow-y: auto; /* Allow vertical scroll */
-      transition: background 0.4s var(--md-sys-motion-easing);
+      overflow-x: hidden;
+      overflow-y: auto;
+      transition: all 0.5s var(--md-sys-motion-easing);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(124, 185, 232, 0.08) 0%, transparent 25%),
+        radial-gradient(circle at 90% 80%, rgba(93, 138, 168, 0.08) 0%, transparent 25%);
     }
-    /* Header */
+    
+    [data-theme="light"] body {
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(124, 185, 232, 0.1) 0%, transparent 25%),
+        radial-gradient(circle at 90% 80%, rgba(176, 224, 230, 0.1) 0%, transparent 25%);
+    }
+    
+    /* Eye Illusion Background Elements - Milky Blue Theme */
+    .background-illusion {
+      position: fixed;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
+      opacity: 0.05;
+      filter: blur(40px);
+      animation: var(--float-animation);
+      z-index: -1;
+    }
+    
+    .illusion-1 {
+      top: 10%;
+      left: 5%;
+      animation-delay: 0s;
+    }
+    
+    .illusion-2 {
+      bottom: 20%;
+      right: 10%;
+      animation-delay: -2s;
+    }
+    
+    .illusion-3 {
+      top: 60%;
+      left: 80%;
+      width: 200px;
+      height: 200px;
+      animation-delay: -4s;
+    }
+    
+    /* Header with Frosted Glass Effect */
     header {
-      background: var(--md-sys-color-primary);
-      color: var(--md-sys-color-on-primary);
-      padding: 20px 24px;
+      background: var(--glass-background);
+      backdrop-filter: blur(var(--glass-blur));
+      -webkit-backdrop-filter: blur(var(--glass-blur));
+      color: var(--md-sys-color-on-surface);
+      padding: 22px 24px;
       text-align: center;
+      font-family: 'Montserrat', sans-serif;
       font-size: var(--md-sys-typescale-title-large);
-      font-weight: 500;
-      box-shadow: 0 4px 12px var(--md-sys-color-shadow);
-      position: relative;
-      z-index: 10;
-      transition: background 0.3s var(--md-sys-motion-easing);
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      box-shadow: 0 4px 20px var(--md-sys-color-shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--glass-border);
+      transition: all 0.4s var(--md-sys-motion-easing);
     }
-    /* Theme Toggle Button in Header */
+    
+    /* Animated Gradient Text Effect - Milky Blue */
+    .header-gradient {
+      background: linear-gradient(90deg, 
+        var(--md-sys-color-primary), 
+        var(--md-sys-color-tertiary),
+        var(--md-sys-color-primary));
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: var(--gradient-animation);
+      display: inline-block;
+      font-weight: 700;
+    }
+    
+    /* Theme Toggle with Frosted Glass */
     .theme-toggle {
       position: absolute;
-      top: 16px;
-      right: 16px;
-      width: 40px;
-      height: 40px;
+      top: 50%;
+      right: 24px;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.1);
-      border: none;
-      color: var(--md-sys-color-on-primary);
-      font-size: 20px;
+      background: var(--md-sys-color-surface-container-high);
+      border: 1.5px solid var(--glass-border);
+      color: var(--md-sys-color-primary);
+      font-size: 22px;
       cursor: pointer;
       transition: all 0.3s var(--md-sys-motion-easing);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
     }
+    
     .theme-toggle:hover {
-      background: rgba(255,255,255,0.2);
-      transform: scale(1.1);
+      background: var(--md-sys-color-primary);
+      color: var(--md-sys-color-surface);
+      transform: translateY(-50%) scale(1.1) rotate(180deg);
+      box-shadow: var(--frost-glow);
+      border-color: var(--md-sys-color-tertiary);
     }
-    [data-theme="light"] .theme-toggle {
-      background: rgba(0,0,0,0.1);
-      color: var(--md-sys-color-on-primary);
+    
+    .theme-toggle:active {
+      transform: translateY(-50%) scale(0.95);
     }
+    
     /* Main Container */
     .main-container {
       flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      overflow-y: auto; /* Fixed: Allow vertical scroll */
-      padding: 24px;
-      gap: 24px;
+      padding: 32px 24px;
+      gap: 32px;
+      position: relative;
     }
-    /* Cards Grid */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      width: 100%;
-      max-width: 800px;
+    
+    /* Welcome Message */
+    .welcome-message {
+      text-align: center;
+      max-width: 600px;
+      margin-bottom: 16px;
     }
-    .project-card {
-      background: var(--md-sys-color-surface-container);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 4px 12px var(--md-sys-color-shadow);
-      transition: all 0.3s var(--md-sys-motion-easing);
-      border: 1px solid var(--md-sys-color-outline);
+    
+    .welcome-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
     }
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px var(--md-sys-color-shadow);
-      border-color: var(--md-sys-color-primary);
-    }
-    .project-title {
-      font-size: var(--md-sys-typescale-title-large);
-      font-weight: 500;
-      margin-bottom: 8px;
-      color: var(--md-sys-color-primary);
-    }
-    .project-description {
+    
+    .welcome-subtitle {
       font-size: var(--md-sys-typescale-body-large);
       color: var(--md-sys-color-on-surface);
-      opacity: 0.8;
-      margin-bottom: 16px;
-      line-height: 1.5;
+      opacity: 0.9;
+      line-height: 1.6;
+      font-weight: 400;
     }
+    
+    /* Enhanced Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      width: 100%;
+      max-width: 1200px;
+    }
+    
+    /* Project Card with Frosted Glass */
+    .project-card {
+      background: var(--glass-background);
+      backdrop-filter: blur(var(--glass-blur));
+      -webkit-backdrop-filter: blur(var(--glass-blur));
+      border-radius: 24px;
+      padding: 28px;
+      border: 1px solid var(--glass-border);
+      transition: all 0.4s var(--md-sys-motion-easing);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, 
+        var(--md-sys-color-primary), 
+        var(--md-sys-color-tertiary));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s var(--md-sys-motion-easing);
+    }
+    
+    .project-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 
+        0 20px 40px var(--md-sys-color-shadow),
+        var(--frost-glow);
+      border-color: var(--md-sys-color-primary);
+    }
+    
+    .project-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    /* Card Content */
+    .project-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: white;
+      transition: all 0.3s var(--md-sys-motion-easing);
+      box-shadow: 0 4px 12px rgba(124, 185, 232, 0.2);
+    }
+    
+    .project-card:hover .project-icon {
+      transform: rotate(15deg) scale(1.1);
+      box-shadow: 0 8px 20px rgba(124, 185, 232, 0.3);
+    }
+    
+    .project-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: var(--md-sys-typescale-title-large);
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--md-sys-color-on-surface);
+      transition: color 0.3s var(--md-sys-motion-easing);
+    }
+    
+    .project-card:hover .project-title {
+      color: var(--md-sys-color-primary);
+    }
+    
+    .project-description {
+      font-size: var(--md-sys-typescale-body-medium);
+      color: var(--md-sys-color-on-surface);
+      opacity: 0.9;
+      margin-bottom: 24px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+    
+    /* Enhanced Button with Milky Blue Theme */
     .project-btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       width: 100%;
-      padding: 12px 20px;
-      background: var(--md-sys-color-primary);
-      color: var(--md-sys-color-on-primary);
+      padding: 14px 24px;
+      background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-primary-variant));
+      color: var(--md-sys-color-surface);
       border: none;
-      border-radius: 12px;
-      font-size: 14px;
+      border-radius: 14px;
+      font-size: var(--md-sys-typescale-label-large);
       font-weight: 500;
       cursor: pointer;
       transition: all 0.3s var(--md-sys-motion-easing);
       text-decoration: none;
       justify-content: center;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
     }
+    
+    .project-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s var(--md-sys-motion-easing);
+      z-index: -1;
+    }
+    
     .project-btn:hover {
-      background: var(--md-sys-color-primary-container);
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(3, 218, 198, 0.3);
+      box-shadow: 
+        0 10px 25px rgba(124, 185, 232, 0.3),
+        var(--neon-glow);
+      color: white;
     }
+    
+    .project-btn:hover::before {
+      left: 100%;
+    }
+    
     .material-symbols-rounded {
-      font-size: 18px;
-      font-variation-settings: 'FILL' 1;
+      font-size: 20px;
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      transition: transform 0.3s var(--md-sys-motion-easing);
     }
-    /* Footer */
+    
+    .project-btn:hover .material-symbols-rounded {
+      transform: translateX(4px);
+    }
+    
+    /* Footer with Animated Border */
     footer {
       background: var(--md-sys-color-surface-container);
       color: var(--md-sys-color-on-surface);
       text-align: center;
-      padding: 16px;
-      font-size: 14px;
-      opacity: 0.8;
-      border-top: 1px solid var(--md-sys-color-outline);
+      padding: 24px;
+      font-size: var(--md-sys-typescale-body-medium);
+      border-top: 1px solid var(--glass-border);
+      position: relative;
+      overflow: hidden;
+      margin-top: auto;
     }
-    /* Mobile */
+    
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--md-sys-color-primary), transparent);
+      animation: slide-border 3s linear infinite;
+    }
+    
+    footer a {
+      color: var(--md-sys-color-primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s var(--md-sys-motion-easing);
+      position: relative;
+    }
+    
+    footer a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--md-sys-color-primary);
+      transition: width 0.3s var(--md-sys-motion-easing);
+    }
+    
+    footer a:hover {
+      color: var(--md-sys-color-tertiary);
+    }
+    
+    footer a:hover::after {
+      width: 100%;
+    }
+    
+    /* Animations */
+    @keyframes float {
+      0%, 100% { 
+        transform: translateY(0px) translateX(0) scale(1); 
+      }
+      33% { 
+        transform: translateY(-20px) translateX(10px) scale(1.05); 
+      }
+      66% { 
+        transform: translateY(10px) translateX(-10px) scale(0.95); 
+      }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { 
+        opacity: 0.05; 
+        transform: scale(1);
+      }
+      50% { 
+        opacity: 0.1; 
+        transform: scale(1.05);
+      }
+    }
+    
+    @keyframes gradient-shift {
+      0% { 
+        background-position: 0% 50%; 
+      }
+      50% { 
+        background-position: 100% 50%; 
+      }
+      100% { 
+        background-position: 0% 50%; 
+      }
+    }
+    
+    @keyframes slide-border {
+      0% { 
+        left: -100%; 
+      }
+      100% { 
+        left: 100%; 
+      }
+    }
+    
+    /* Mobile Responsiveness */
     @media (max-width: 768px) {
-      .cards-grid { grid-template-columns: 1fr; gap: 16px; }
-      .main-container { padding: 16px; }
-      header { padding: 16px; }
+      .cards-grid { 
+        grid-template-columns: 1fr; 
+        gap: 20px;
+      }
+      .main-container { 
+        padding: 24px 16px; 
+        gap: 28px;
+      }
+      header { 
+        padding: 18px 16px; 
+        font-size: 18px;
+      }
+      .theme-toggle {
+        width: 44px;
+        height: 44px;
+        right: 16px;
+      }
+      .project-card {
+        padding: 24px;
+      }
+      .welcome-title {
+        font-size: 32px;
+      }
+      .welcome-subtitle {
+        font-size: 15px;
+        padding: 0 8px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      :root {
+        --glass-blur: 8px;
+      }
+      .welcome-title {
+        font-size: 28px;
+      }
+      .project-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+      }
+    }
+    
+    /* Custom Scrollbar - Milky Blue Theme */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: var(--md-sys-color-surface-container);
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, var(--md-sys-color-primary), var(--md-sys-color-tertiary));
+      border-radius: 4px;
+      border: 2px solid var(--md-sys-color-surface-container);
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(to bottom, var(--md-sys-color-primary-variant), var(--md-sys-color-tertiary));
+    }
+    
+    /* Additional styles for better theme visibility */
+    body[data-theme="light"] {
+      background-color: var(--md-sys-color-surface) !important;
+    }
+    
+    body[data-theme="dark"] {
+      background-color: var(--md-sys-color-surface) !important;
+    }
+    
+    /* Ensure theme variables are properly applied */
+    * {
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     }
   </style>
 </head>
 <body data-theme="dark">
 
-  <!-- Header with Theme Toggle -->
+  <!-- Eye Illusion Background Elements -->
+  <div class="background-illusion illusion-1"></div>
+  <div class="background-illusion illusion-2"></div>
+  <div class="background-illusion illusion-3"></div>
+
+  <!-- Header with Frosted Glass Effect -->
   <header>
-    Endroid Dashboard
-    <button class="theme-toggle" id="themeToggle">
+    <span class="header-gradient">Endroid Dashboard</span>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <span class="material-symbols-rounded" id="themeIcon">dark_mode</span>
     </button>
   </header>
 
   <!-- Main Container -->
   <div class="main-container">
+    <!-- Welcome Message -->
+    <div class="welcome-message">
+      <h1 class="welcome-title">Welcome to Endroid</h1>
+      <p class="welcome-subtitle">Experience modern design with Material You 3, expressive animations, and eye-catching visual effects across all our projects.</p>
+    </div>
+
     <!-- Cards Grid -->
     <div class="cards-grid">
-    <!-- Endroid Ai -->
+      <!-- Endroid Ai -->
       <div class="project-card">
-        <div class="project-title">Endroid Ai</div>
-        <div class="project-description">A free and Open-Source Ai powered by Gemini 2.0 Flash, with Material You 3 Expressive theme, icons, and seemless dark and light theme.</div>
-        <a href="https://wized2.github.io/Ai/" class="project-btn">
+        <div class="project-icon">
           <span class="material-symbols-rounded">smart_toy</span>
-          Visit Project
+        </div>
+        <div class="project-title">Endroid Ai</div>
+        <div class="project-description">A free and Open-Source Ai powered by Gemini 2.0 Flash, with Material You 3 Expressive theme, icons, and seamless dark/light themes.</div>
+        <a href="https://wized2.github.io/Ai/" class="project-btn">
+          <span class="material-symbols-rounded">rocket_launch</span>
+          Launch AI Assistant
         </a>
       </div>
       
       <!-- Endroid Search -->
       <div class="project-card">
-        <div class="project-title">Endroid Search</div>
-        <div class="project-description">A modern, customizable search engine with seamless experience.</div>
-        <a href="https://wized2.github.io/Search/" class="project-btn">
+        <div class="project-icon">
           <span class="material-symbols-rounded">search</span>
-          Visit Project
+        </div>
+        <div class="project-title">Endroid Search</div>
+        <div class="project-description">A modern, customizable search engine with predictive analytics, voice search, and seamless browsing experience.</div>
+        <a href="https://wized2.github.io/Search/" class="project-btn">
+          <span class="material-symbols-rounded">explore</span>
+          Explore Search
+        </a>
+      </div>
+ 
+      <!-- Endroid Base64 -->
+      <div class="project-card">
+        <div class="project-icon">
+          <span class="material-symbols-rounded">search</span>
+        </div>
+        <div class="project-title">Endroid Base64</div>
+        <div class="project-description">Endroid Base64 | Secure Local Encoding Tool.100% local Base64 encoder/decoder. No data leaves your browser.</div>
+        <a href="https://wized2.github.io/Base64/" class="project-btn">
+          <span class="material-symbols-rounded">encrypted_add</span>
+          Endroid Base64
         </a>
       </div>
 
+
       <!-- Endroid Clock -->
       <div class="project-card">
-        <div class="project-title">Endroid Clock</div>
-        <div class="project-description">An interactive analog and digital clock app with Material You theme.</div>
-        <a href="https://wized2.github.io/Clock/" class="project-btn">
+        <div class="project-icon">
           <span class="material-symbols-rounded">schedule</span>
-          Visit Project
+        </div>
+        <div class="project-title">Endroid Clock</div>
+        <div class="project-description">An interactive analog and digital clock app with timezone support, alarms, and Material You dynamic theming.</div>
+        <a href="https://wized2.github.io/Clock/" class="project-btn">
+          <span class="material-symbols-rounded">timer</span>
+          Check Time
         </a>
       </div>
 
       <!-- Endroid Notes -->
       <div class="project-card">
-        <div class="project-title">Endroid Notes</div>
-        <div class="project-description">A beautiful offline notes app with swipe-to-delete and auto-save.</div>
-        <a href="https://wized2.github.io/Notes/" class="project-btn">
+        <div class="project-icon">
           <span class="material-symbols-rounded">note</span>
-          Visit Project
+        </div>
+        <div class="project-title">Endroid Notes</div>
+        <div class="project-description">A beautiful offline notes app with rich text editing, swipe-to-delete, auto-save, and cloud sync capabilities.</div>
+        <a href="https://wized2.github.io/Notes/" class="project-btn">
+          <span class="material-symbols-rounded">edit_note</span>
+          Take Notes
         </a>
       </div>
 
       <!-- Endroid Calculator -->
       <div class="project-card">
-        <div class="project-title">Endroid Calculator</div>
-        <div class="project-description">A beautiful  Calculator app with Material You 3 Expressive theme and  icons.</div>
-        <a href="https://wized2.github.io/Calculator/" class="project-btn">
+        <div class="project-icon">
           <span class="material-symbols-rounded">calculate</span>
-          Visit Project
+        </div>
+        <div class="project-title">Endroid Calculator</div>
+        <div class="project-description">Advanced calculator app with scientific functions, history tracking, and Material You 3 expressive animations.</div>
+        <a href="https://wized2.github.io/Calculator/" class="project-btn">
+          <span class="material-symbols-rounded">functions</span>
+          Start Calculating
         </a>
       </div>
 
-            <!-- Endroid Maze -->
+      <!-- Endroid Maze -->
       <div class="project-card">
-        <div class="project-title">Endroid Maze</div>
-        <div class="project-description">Fun for Everyone ! Play and enjoy Endroid Maze</div>
-        <a href="https://wized2.github.io/Maze/" class="project-btn">
+        <div class="project-icon">
           <span class="material-symbols-rounded">stadia_controller</span>
-          Visit Project
+        </div>
+        <div class="project-title">Endroid Maze</div>
+        <div class="project-description">Immersive maze game with procedurally generated levels, multiple difficulty modes, and smooth animations.</div>
+        <a href="https://wized2.github.io/Maze/" class="project-btn">
+          <span class="material-symbols-rounded">sports_esports</span>
+          Play Game
         </a>
       </div>
 
-      
       <!-- Other Projects -->
       <div class="project-card">
-        <div class="project-title">Other Projects</div>
-        <div class="project-description">More exciting projects coming soon. Stay tuned for updates!</div>
-        <a href="https://github.com/Wized2" class="project-btn">
+        <div class="project-icon">
           <span class="material-symbols-rounded">code</span>
-          View All on GitHub
+        </div>
+        <div class="project-title">More Projects</div>
+        <div class="project-description">Discover all our open-source projects, upcoming features, and contribute to the development on GitHub.     Made with ♥️ in Pakistan</div>
+        <a href="https://github.com/Wized2" class="project-btn">
+          <span class="material-symbols-rounded">code_blocks</span>
+          View All Projects
         </a>
       </div>
     </div>
@@ -260,40 +699,192 @@
 
   <!-- Footer -->
   <footer>
-    © 2025 Endroid | All Rights Reserved | <a href="https://github.com/Wized2/Endroid" style="color: var(--md-sys-color-primary);">GitHub</a>
+    © 2025 Endroid | All Rights Reserved | <a href="https://github.com/Wized2/Endroid">GitHub Repository</a>
   </footer>
 
   <script>
+    // Enhanced Theme Toggle with Milky Blue Theme
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = document.getElementById('themeIcon');
+    const body = document.body;
 
-    // Load saved theme
+    // Fix: Load theme properly and ensure light mode works
     document.addEventListener('DOMContentLoaded', () => {
-      const savedTheme = localStorage.getItem('endroid-dashboard-theme') || 'dark';
-      document.body.dataset.theme = savedTheme;
+      // First, check if there's a saved theme
+      const savedTheme = localStorage.getItem('endroid-dashboard-theme');
+      
+      if (savedTheme) {
+        body.dataset.theme = savedTheme;
+      } else {
+        // Check system preference
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        body.dataset.theme = prefersDark ? 'dark' : 'light';
+        localStorage.setItem('endroid-dashboard-theme', body.dataset.theme);
+      }
+      
       updateThemeIcon();
+      
+      // Add smooth entrance animation for cards
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+          card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, 100 + (index * 100));
+      });
     });
 
-    // Toggle theme
+    // Enhanced theme toggle with visual feedback
     themeToggle.addEventListener('click', () => {
-      const isDark = document.body.dataset.theme === 'dark';
+      const isDark = body.dataset.theme === 'dark';
       const newTheme = isDark ? 'light' : 'dark';
-      document.body.dataset.theme = newTheme;
+      
+      // Add ripple effect
+      createRipple(event);
+      
+      // Smooth theme transition
+      body.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+      body.dataset.theme = newTheme;
+      
+      // Save preference
       localStorage.setItem('endroid-dashboard-theme', newTheme);
       updateThemeIcon();
+      
+      // Animate background illusions
+      const illusions = document.querySelectorAll('.background-illusion');
+      illusions.forEach(illusion => {
+        illusion.style.animation = 'none';
+        setTimeout(() => {
+          illusion.style.animation = '';
+        }, 10);
+      });
     });
 
     function updateThemeIcon() {
-      themeIcon.textContent = document.body.dataset.theme === 'dark' ? 'dark_mode' : 'light_mode';
+      themeIcon.textContent = body.dataset.theme === 'dark' ? 'dark_mode' : 'light_mode';
+      themeIcon.style.transition = 'transform 0.3s ease';
+      themeIcon.style.transform = 'scale(1.2)';
+      
+      setTimeout(() => {
+        themeIcon.style.transform = 'scale(1)';
+      }, 300);
     }
 
-    // Auto-detect system theme
-    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
+    // Auto-detect system theme changes
+    const systemThemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    function handleSystemThemeChange(e) {
+      // Only update if user hasn't set a preference
       if (!localStorage.getItem('endroid-dashboard-theme')) {
-        document.body.dataset.theme = e.matches ? 'light' : 'dark';
+        const newTheme = e.matches ? 'dark' : 'light';
+        body.dataset.theme = newTheme;
         updateThemeIcon();
       }
+    }
+    
+    systemThemeQuery.addEventListener('change', handleSystemThemeChange);
+
+    // Ripple effect function
+    function createRipple(event) {
+      const button = event.currentTarget;
+      const circle = document.createElement('span');
+      const diameter = Math.max(button.clientWidth, button.clientHeight);
+      const radius = diameter / 2;
+
+      circle.style.width = circle.style.height = `${diameter}px`;
+      circle.style.left = `${event.clientX - button.getBoundingClientRect().left - radius}px`;
+      circle.style.top = `${event.clientY - button.getBoundingClientRect().top - radius}px`;
+      circle.classList.add('ripple');
+
+      const ripple = button.getElementsByClassName('ripple')[0];
+      if (ripple) ripple.remove();
+
+      button.appendChild(circle);
+    }
+
+    // Parallax effect for background illusions
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 30;
+      const y = (e.clientY / window.innerHeight - 0.5) * 30;
+      
+      const illusions = document.querySelectorAll('.background-illusion');
+      illusions.forEach((illusion, index) => {
+        const speed = 0.015 * (index + 1);
+        const currentX = parseFloat(illusion.style.transform?.match(/translateX\(([^)]+)\)/)?.[1] || 0);
+        const currentY = parseFloat(illusion.style.transform?.match(/translateY\(([^)]+)\)/)?.[1] || 0);
+        
+        // Smooth interpolation
+        const targetX = x * speed;
+        const targetY = y * speed;
+        
+        illusion.style.transform = `translate(${targetX}px, ${targetY}px)`;
+      });
     });
+
+    // Enhanced hover effects for cards
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        const icon = card.querySelector('.project-icon');
+        if (icon) {
+          icon.style.transform = 'rotate(15deg) scale(1.1)';
+        }
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        const icon = card.querySelector('.project-icon');
+        if (icon) {
+          icon.style.transform = 'rotate(0) scale(1)';
+        }
+      });
+    });
+
+    // Add CSS for ripple effect
+    const style = document.createElement('style');
+    style.textContent = `
+      .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(124, 185, 232, 0.3);
+        transform: scale(0);
+        animation: ripple-animation 0.6s linear;
+        pointer-events: none;
+      }
+      
+      @keyframes ripple-animation {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+      
+      /* Ensure smooth transitions */
+      body, header, .project-card, .project-btn, .theme-toggle {
+        transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                    color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                    border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                    box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    `;
+    document.head.appendChild(style);
+    
+    // Force light mode testing function (for debugging)
+    window.enableLightMode = function() {
+      body.dataset.theme = 'light';
+      localStorage.setItem('endroid-dashboard-theme', 'light');
+      updateThemeIcon();
+    };
+    
+    window.enableDarkMode = function() {
+      body.dataset.theme = 'dark';
+      localStorage.setItem('endroid-dashboard-theme', 'dark');
+      updateThemeIcon();
+    };
   </script>
 </body>
-  </html>
+</html>
