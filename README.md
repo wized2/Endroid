@@ -19,15 +19,13 @@ This project includes several key apps and platforms built around the **Material
 ## Available Projects
 
 ### 1. **Endroid Search**
-- **Description**: A modern, customizable search engine that allows users to switch between multiple search engines, including Google, Bing, and DuckDuckGo.
+- **Description**: A modern, customizable search engine that allows users to search with Google.
   
-- **Key Features**:
-  - **Search Engine Switching**: Users can easily toggle between different search engines.
   - **Responsive Design**: Fully optimized for mobile and desktop users.
   - **Customizable UI**: Built to be sleek, intuitive, and user-friendly.
   - **Light and Dark Mode**: Based on Material You theme.
 
-- [![Visit Endroid Search](https://img.shields.io/badge/Visit%20Project-Endroid%20Search-%2303DAC6?style=for-the-badge&logo=google)](https://wized1.github.io/Search/)
+- [![Visit Endroid Search](https://img.shields.io/badge/Visit%20Project-Endroid%20Search-%2303DAC6?style=for-the-badge&logo=google)](https://wized2.github.io/Search/)
 
 ---
 
@@ -39,7 +37,7 @@ This project includes several key apps and platforms built around the **Material
   - **Material You Design**: A modern, minimalist design using Material You principles.
   - **Responsive UI**: Works seamlessly across all devices.
 
-- [![Visit Endroid Clock](https://img.shields.io/badge/Visit%20Project-Endroid%20Clock-%2303DAC6?style=for-the-badge&logo=clock)](https://wized1.github.io/Clock)
+- [![Visit Endroid Clock](https://img.shields.io/badge/Visit%20Project-Endroid%20Clock-%2303DAC6?style=for-the-badge&logo=clock)](https://wized2.github.io/Clock)
 
 ---
 
@@ -55,7 +53,7 @@ This project includes several key apps and platforms built around the **Material
   - **Zero Dependencies**: No login, no sync, no trackers — pure privacy.
   - **Material You Styling**: Clean, modern, animated UI with smooth transitions.
 
-- [![Visit Endroid Notes](https://img.shields.io/badge/Visit%20Project-Endroid%20Notes-%2303DAC6?style=for-the-badge&logo=note)](https://wized1.github.io/Notes/)
+- [![Visit Endroid Notes](https://img.shields.io/badge/Visit%20Project-Endroid%20Notes-%2303DAC6?style=for-the-badge&logo=note)](https://wized2.github.io/Notes/)
 
 ---
 
