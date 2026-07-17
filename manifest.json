@@ -1,17 +1,41 @@
 {
-  "name": "Endroid",
+  "name": "Endroid Dashboard",
   "short_name": "Endroid",
   "description": "Endroid Dashboard and hub for all Endroid projects",
-  "start_url": "/Endroid/",
-  "scope": "/Endroid/",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#FEF7FF",
-  "theme_color": "#121212",
+  "background_color": "#ffffff",
+  "theme_color": "#FEF7FF",
   "icons": [
     {
-      "src": "/Endroid/icon.svg",
-      "type": "image/svg+xml",
-      "sizes": "any"
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192x192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-512x512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
