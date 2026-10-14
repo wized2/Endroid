@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://endroid.zone.id/sitemap.xml
+Sitemap: https://wized2.github.io/Endroid/sitemap.xml

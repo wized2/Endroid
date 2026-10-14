@@ -1,11 +1,11 @@
 {
-  "name": "Endroid Dashboard",
+  "name": "Endroid",
   "short_name": "Endroid",
-  "description": "Endroid Dashboard and hub for all Endroid projects",
+  "description": "Project Endroid \u2014 FOSS tools and apps by Mudasir Wazir.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#FEF7FF",
+  "background_color": "#0f1117",
+  "theme_color": "#0f1117",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",

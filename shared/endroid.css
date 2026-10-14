@@ -1,0 +1,55 @@
+/* Endroid design system — use on every Project Endroid surface */
+:root {
+  --e-bg: #0f1117;
+  --e-surface: #1a1b26;
+  --e-surface-2: #24283b;
+  --e-fg: #e8eaef;
+  --e-muted: #a9b1d6;
+  --e-primary: #7aa2f7;
+  --e-primary-dim: #3d59a1;
+  --e-accent: #9ece6a;
+  --e-warn: #ff9e64;
+  --e-radius: 16px;
+  --e-radius-pill: 999px;
+  --e-shadow: 0 12px 40px rgba(0,0,0,.35);
+  --e-font: "Inter", "Roboto", system-ui, -apple-system, sans-serif;
+  --e-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --e-bg: #f6f7fb;
+    --e-surface: #ffffff;
+    --e-surface-2: #eef0f6;
+    --e-fg: #1a1b26;
+    --e-muted: #5c637a;
+    --e-primary: #2e5aac;
+    --e-primary-dim: #1565c0;
+    --e-accent: #2e7d32;
+    --e-shadow: 0 12px 32px rgba(30,40,80,.12);
+    color-scheme: light;
+  }
+}
+.e-shell { font-family: var(--e-font); background: var(--e-bg); color: var(--e-fg); }
+.e-topbar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .75rem 1.25rem;
+  background: color-mix(in srgb, var(--e-surface) 88%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid color-mix(in srgb, var(--e-muted) 25%, transparent);
+}
+.e-brand { display: flex; align-items: center; gap: .6rem; font-weight: 700; color: var(--e-fg); text-decoration: none; }
+.e-brand span { color: var(--e-primary); }
+.e-topbar nav { display: flex; flex-wrap: wrap; gap: .5rem; }
+.e-topbar a {
+  color: var(--e-muted); text-decoration: none; font-size: .9rem; font-weight: 500;
+  padding: .35rem .7rem; border-radius: var(--e-radius-pill);
+}
+.e-topbar a:hover { color: var(--e-fg); background: var(--e-surface-2); }
+.e-footer {
+  margin-top: 3rem; padding: 2rem 1.25rem;
+  border-top: 1px solid color-mix(in srgb, var(--e-muted) 22%, transparent);
+  color: var(--e-muted); font-size: .85rem; text-align: center;
+}
+.e-footer a { color: var(--e-primary); }

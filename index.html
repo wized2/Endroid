@@ -1,1191 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta Tags -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <!-- PRIMARY META TAGS - Supercharged for SEO -->
-  <title>Endroid – Mudasir Wazir | Top Web Developer in Pakistan, Material You 3 Apps</title>
-  <meta name="description" content="Endroid by Mudasir Wazir – leading web developer in Rahim Yar Khan, Punjab, Pakistan. Build modern web apps, AI assistants, search engines, notes, calculators, and games with Material You 3. Hire the best freelancer for custom websites, UI/UX, and SEO." />
-  <meta name="keywords" content="Mudasir Wazir, Endroid, Endroid Dashboard, Endroid Developer, web developer Pakistan, best web developer in Punjab, Rahim Yar Khan web developer, top freelancer Pakistan, frontend developer, Material You 3, PWA developer, responsive web design, UI/UX expert, SEO optimization, custom website development, e-commerce solutions, progressive web apps, AI integrated web apps, Gemini AI, open source developer, hire web developer, affordable web design, top web developer, modern web applications, interactive dashboards, digital experiences, Endroid Elyx, Endroid Search, Endroid Notes, Endroid Calculator, Endroid Maze, Endroid Base64, Endroid Clock, HTML, CSS, JavaScript, React developer, Pakistan software house, creative developer, visual artist, web designer Pakistan, Rahim Yar Khan, Punjab, Pakistan, freelance web developer, best developer, top 1% developer, code, design, launch, digital marketing Pakistan" />
-  <meta name="author" content="Mudasir Wazir (Endroid)" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Endroid — Project Endroid by Mudasir Wazir | FOSS Tools, Apps & Games from Pakistan</title>
+  <meta name="description" content="Project Endroid is a free and open-source studio by Mudasir Wazir (Rahim Yar Khan, Pakistan): Material You web tools, games, Android apps (Fern, CodeCanvas, Class 8, D-Harness), and the Endroid Dash hub." />
+  <meta name="keywords" content="Endroid, Project Endroid, Mudasir Wazir, Mudsir Wazir, Rahim Yar Khan, Pakistan open source, Endroid Dash, Endroid AI, Endroid Search, Fern Android monitor, CodeCanvas editor, Class 8 homework, D-Harness, Material You 3, FOSS Pakistan, endroid.zone.id" />
+  <meta name="author" content="Mudasir Wazir" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="googlebot" content="index, follow" />
-  <meta name="rating" content="General" />
-
-  <!-- Canonical URL -->
+  <meta name="theme-color" content="#0f1117" />
+  <meta name="application-name" content="Endroid" />
   <link rel="canonical" href="https://endroid.zone.id/" />
-
-  <!-- Local SEO for Rahim Yar Khan, Punjab, Pakistan + regional targeting -->
-  <meta name="geo.region" content="PK-PB" />
-  <meta name="geo.placename" content="Rahim Yar Khan, Punjab, Pakistan" />
-  <meta name="geo.position" content="28.4212;70.2989" />
-  <meta name="ICBM" content="28.4212, 70.2989" />
-
-  <!-- Open Graph / Facebook Meta Tags -->
+  <link rel="alternate" hreflang="en" href="https://endroid.zone.id/" />
+  <link rel="alternate" hreflang="en" href="https://wized2.github.io/Endroid/" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://endroid.zone.id/" />
-  <meta property="og:title" content="Endroid – Mudasir Wazir | Top Web Developer in Pakistan" />
-  <meta property="og:description" content="Endroid by Mudasir Wazir delivers modern web apps with Material You 3. Based in Rahim Yar Khan, Pakistan. Hire for custom websites, UI/UX, AI tools, and digital solutions." />
-  <meta property="og:image" content="https://endroid.zone.id/favicon.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Endroid Dashboard Preview" />
   <meta property="og:site_name" content="Endroid" />
-  <meta property="og:locale" content="en_US" />
-
-  <!-- Twitter Meta Tags -->
+  <meta property="og:url" content="https://endroid.zone.id/" />
+  <meta property="og:title" content="Endroid — FOSS tools & apps by Mudasir Wazir" />
+  <meta property="og:description" content="Material You web tools, games, and Android FOSS from Project Endroid." />
+  <meta property="og:image" content="https://endroid.zone.id/icons/icon-512x512.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://endroid.zone.id/" />
-  <meta name="twitter:title" content="Endroid – Mudasir Wazir | Top Web Developer Pakistan" />
-  <meta name="twitter:description" content="Discover Endroid: modern web apps built by Mudasir Wazir in Rahim Yar Khan, Pakistan. AI, search, notes, calculator, games, and more." />
-  <meta name="twitter:image" content="https://endroid.zone.id/favicon.png" />
-  <meta name="twitter:creator" content="@Endroid" />
-  <meta name="twitter:site" content="@Endroid" />
-
-  <!-- PWA Meta Tags -->
-  <meta name="application-name" content="Endroid Dashboard" />
-  <meta name="apple-mobile-web-app-title" content="Endroid" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="format-detection" content="telephone=no" />
-
-  <!-- Icons -->
-  <link rel="icon" href="/favicon.ico" sizes="48x48" />
-  <link rel="icon" href="/icons/icon-192x192.png" type="image/png" sizes="192x192" />
-  <link rel="icon" href="/icons/icon-512x512.png" type="image/png" sizes="512x512" />
+  <meta name="twitter:title" content="Endroid — Project Endroid" />
+  <meta name="twitter:description" content="FOSS studio from Rahim Yar Khan, Pakistan." />
+  <link rel="icon" href="/icons/icon-192x192.png" type="image/png" />
   <link rel="apple-touch-icon" href="/icons/icon-180x180.png" />
-
-  <!-- PWA Manifest -->
   <link rel="manifest" href="/manifest.json" />
-
-  <!-- Additional SEO Meta -->
-  <meta name="language" content="English, Urdu" />
-  <meta name="revisit-after" content="7 days" />
-  <meta name="generator" content="Endroid" />
-  <meta name="subject" content="Web Applications & Development Services" />
-  <meta name="copyright" content="Mudasir Wazir, Endroid" />
-  <meta name="coverage" content="Worldwide, Pakistan, Middle East, USA, UK" />
-  <meta name="distribution" content="Global" />
-  <meta name="classification" content="Web Applications, Software Development" />
-
-  <!-- COMPREHENSIVE STRUCTURED DATA (JSON-LD) -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Endroid",
-      "alternateName": ["Endroid Studio", "Endroid Dashboard", "Mudasir Wazir Endroid"],
-      "url": "https://endroid.zone.id/",
-      "logo": "https://endroid.zone.id/favicon.png",
-      "description": "Endroid is a software development brand founded by Mudasir Wazir, specializing in modern web applications, frontend development, and UI/UX design.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Rahim Yar Khan",
-        "addressRegion": "Punjab",
-        "addressCountry": "Pakistan"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+92-307-3477752",
-        "contactType": "customer service",
-        "availableLanguage": ["English", "Urdu"]
-      },
-      "sameAs": [
-        "https://github.com/Wized2",
-        "https://wized2.github.io/Ai/"
-      ]
-    }
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Mudasir Wazir",
-      "alternateName": ["Mudasir", "M. Wazir", "Endroid", "Endroid Founder", "Web Developer Mudasir"],
-      "description": "Mudasir Wazir is a top-rated web developer from Rahim Yar Khan, Punjab, Pakistan. He is the creator of Endroid, a collection of modern, open-source web applications built with Material You 3 design.",
-      "url": "https://endroid.zone.id/",
-      "image": "https://endroid.zone.id/favicon.png",
-      "jobTitle": "Web Developer & UI/UX Designer",
-      "nationality": "Pakistani",
-      "email": "hello@endroid.zone.id",
-      "telephone": "+92-307-3477752",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Rahim Yar Khan",
-        "addressRegion": "Punjab",
-        "addressCountry": "Pakistan"
-      },
-      "sameAs": [
-        "https://github.com/Wized2"
-      ],
-      "knowsAbout": [
-        "Frontend Development",
-        "Material You 3 Design System",
-        "Progressive Web Apps (PWA)",
-        "Artificial Intelligence Integration",
-        "UI/UX Engineering",
-        "JavaScript, HTML5, CSS3",
-        "ReactJS, Modern Frameworks",
-        "SEO Optimization",
-        "E-commerce Development",
-        "Responsive Web Design"
-      ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Endroid"
-      }
-    }
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Endroid Dashboard",
-      "alternateName": ["Endroid Apps", "Endroid Web Tools"],
-      "description": "A portfolio of modern web applications and digital tools built by Mudasir Wazir (Endroid) with Material You 3, expressive animations, and cutting-edge technology.",
-      "url": "https://endroid.zone.id/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://endroid.zone.id/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Endroid App Suite",
-      "alternateName": "Endroid Collection",
-      "description": "A powerful collection of web applications including Endroid Elyx AI, Endroid Search, Endroid Notes, Endroid Calculator, Endroid Clock, Endroid Maze, Endroid Base64 Encoder, Ludo Royale, and Endroid Hosting.",
-      "url": "https://endroid.zone.id/",
-      "applicationCategory": "UtilitiesApplication",
-      "operatingSystem": "Web, iOS, Android",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Mudasir Wazir"
-      },
-      "featureList": [
-        "AI Assistant (Gemini Powered)",
-        "Search Engine",
-        "Offline Notes with Rich Text",
-        "Scientific Calculator",
-        "Analog/Digital Clock",
-        "Procedural Maze Game",
-        "Local Base64 Encoder/Decoder",
-        "Ludo Royale – 2–4 player board game with AI",
-        "Free Static Website Hosting – Endroid Host"
-      ],
-      "countriesSupported": "Worldwide"
-    }
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Web Development & Design",
-      "provider": {
-        "@type": "Person",
-        "name": "Mudasir Wazir"
-      },
-      "providerMobility": "Remote, On-site (Rahim Yar Khan, Punjab)",
-      "areaServed": {
-        "@type": "Country",
-        "name": "Pakistan"
-      },
-      "availableChannel": {
-        "@type": "ServiceChannel",
-        "serviceUrl": "https://endroid.zone.id/",
-        "servicePhone": {
-          "@type": "ContactPoint",
-          "telephone": "+92-307-3477752"
-        },
-        "serviceEmail": "hello@endroid.zone.id"
-      },
-      "description": "Endroid provides custom website development, interactive web application design, UI/UX prototyping, performance tuning, and search engine optimization.",
-      "offers": {
-        "@type": "Offer",
-        "price": "Starting from PKR 5,000",
-        "priceCurrency": "PKR"
-      }
-    }
-  </script>
-
-  <!-- Preconnect and Preload -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://wized2.github.io" />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- Lucide Icons (rounded set) -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-
-  <!-- ===== HIDDEN SEO FLOOD - 6 DETAILED ARTICLES ===== -->
-  <div style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;" aria-hidden="true">
-
-    <!-- ARTICLE 1: About Mudasir Wazir (The Creator) -->
-    <article>
-      <h2>Mudasir Wazir – Founder of Endroid and Top Web Developer in Rahim Yar Khan, Pakistan</h2>
-      <p>Mudasir Wazir is a highly skilled and creative web developer based in Rahim Yar Khan, Punjab, Pakistan. He is the visionary founder behind the Endroid brand, a dynamic hub for modern web applications and innovative digital experiences. Mudasir Wazir specializes in crafting stunning, high-performance websites and progressive web apps (PWAs) using the latest frontend technologies such as HTML5, CSS3, JavaScript, and Material You 3 design principles.</p>
-      <p>As a top-rated freelancer and developer in Pakistan, Mudasir Wazir has helped numerous businesses establish a strong online presence. Whether you need a custom corporate website, a complex interactive dashboard, or an AI-driven tool, Mudasir brings unparalleled expertise and passion to every project. Clients across Lahore, Karachi, Islamabad, Faisalabad, and around the world trust Mudasir Wazir for his clean code, pixel-perfect design, and commitment to client satisfaction.</p>
-      <p>Searching for the best web developer in Pakistan? Look no further than Mudasir Wazir. His work on the Endroid platform showcases his ability to blend aesthetics with functionality, delivering digital products that users love. Contact Mudasir Wazir today at +92-307-3477752 or via email at acartoon766@gmail.com to discuss your next project.</p>
-    </article>
-
-    <!-- ARTICLE 2: About Endroid (The Brand) -->
-    <article>
-      <h2>Endroid – Pakistan's Leading Open-Source Web Application Studio</h2>
-      <p>Endroid is a distinguished software development brand created by Mudasir Wazir, dedicated to building open-source web applications that push the boundaries of design and user experience. Headquartered in Rahim Yar Khan, Punjab, Endroid has quickly become synonymous with quality, innovation, and reliability in the Pakistani tech community and beyond.</p>
-      <p>The Endroid dashboard is a curated collection of tools and applications, each meticulously designed with the Material You 3 design system, offering dynamic theming, expressive animations, and intuitive user interfaces. Endroid's mission is to make modern web technology accessible to everyone, providing free, high-quality apps that solve real-world problems.</p>
-      <p>As a proud Pakistani brand, Endroid represents the burgeoning talent in the country's tech sector. Endroid is not just a portfolio; it's a testament to the capabilities of Pakistani developers on the global stage. Explore Endroid to discover a world of cutting-edge web solutions.</p>
-    </article>
-
-    <!-- ARTICLE 3: Endroid Services – Custom Web Development, UI/UX, SEO -->
-    <article>
-      <h2>Endroid Professional Services – Web Development, UI/UX Design, SEO, and Digital Marketing</h2>
-      <p>Endroid, led by Mudasir Wazir, offers a comprehensive suite of professional services tailored to meet the needs of modern businesses. Based in Rahim Yar Khan, Punjab, but serving clients worldwide, Endroid is your one-stop solution for all things digital.</p>
-      <ul>
-        <li><strong>Custom Website Development:</strong> Endroid builds responsive, fast, and visually stunning websites for corporates, startups, and personal brands. We utilize modern frameworks to ensure your site stands out in search results and captivates your audience.</li>
-        <li><strong>Interactive Web Applications:</strong> From AI assistants like Endroid Elyx to complex dashboards and calculators, Endroid creates powerful web apps that streamline operations and enhance user engagement.</li>
-        <li><strong>UI/UX Design:</strong> Our design philosophy is rooted in Material You 3, ensuring that every interface is not only beautiful but also highly intuitive. Endroid crafts user flows that convert visitors into loyal customers.</li>
-        <li><strong>Performance Optimization &amp; SEO:</strong> Endroid ensures your website loads instantly and ranks highly on Google. We implement best practices for speed, accessibility, and search engine optimization to drive organic traffic.</li>
-        <li><strong>E-commerce Solutions:</strong> Need an online store? Endroid develops robust e-commerce platforms that are secure, scalable, and optimized for sales.</li>
-      </ul>
-      <p>Hire Endroid for affordable, top-tier web development services in Pakistan. Contact Mudasir Wazir directly to get a free quote for your project.</p>
-    </article>
-
-    <!-- ARTICLE 4: Endroid Project Portfolio (Detailed) - UPDATED with Ludo and Hosting -->
-    <article>
-      <h2>Explore the Endroid Portfolio – AI, Search, Notes, Calculator, Maze, Ludo, Hosting, and More</h2>
-      <p>The Endroid dashboard features an impressive array of projects, each demonstrating the technical prowess and creative vision of Mudasir Wazir. Here is a detailed look at each application:</p>
-      <ul>
-        <li><strong>Endroid Elyx AI:</strong> A state-of-the-art AI assistant powered by Google Gemini. Endroid Elyx offers a conversational interface with Material You 3 theming, supporting dark and light modes. It is a free, open-source tool that showcases the integration of advanced AI within a sleek, modern interface.</li>
-        <li><strong>Endroid Search:</strong> A customizable, modern search engine designed for a seamless browsing experience. It provides instant, relevant results with a clean, distraction-free UI.</li>
-        <li><strong>Endroid Base64:</strong> A 100% local Base64 encoder and decoder. Privacy is paramount; no data ever leaves your browser. This tool is essential for developers needing secure, fast encoding.</li>
-        <li><strong>Endroid Clock:</strong> An interactive analog and digital clock with dynamic theming. It features smooth second-hand motion and a visually rich interface, perfect for time management.</li>
-        <li><strong>Endroid Notes:</strong> A beautiful offline notes app with rich text editing capabilities. It supports swipe-to-delete and auto-save features, making it an ideal tool for productivity.</li>
-        <li><strong>Endroid Calculator:</strong> A feature-packed calculator with Material You 3 expressive animations. It includes a history feature and a clean, intuitive design for all arithmetic needs.</li>
-        <li><strong>Endroid Maze:</strong> An impressive game with procedurally generated levels and multiple difficulty modes. It features smooth controls and engaging gameplay, demonstrating Endroid's capabilities in game development.</li>
-        <li><strong>Ludo Royale:</strong> A fun 2–4 player Ludo game with AI opponents. Roll the dice, capture tokens, and race to the finish in this classic board game reimagined for the web. Perfect for casual gaming with friends or challenging the computer.</li>
-        <li><strong>Endroid Hosting:</strong> A free, lightweight static website hosting platform created by Mudasir Wazir. Upload HTML, CSS, and JS files or paste code directly into the built‑in editor and get an instant live URL at e-host.xo.je/your-site. No registration, no ads, no hidden fees – just pure static hosting with a modern Material You 3 interface.</li>
-      </ul>
-      <p>All Endroid projects are open-source and available on GitHub. Visit the Endroid dashboard to experience these tools firsthand.</p>
-    </article>
-
-    <!-- ARTICLE 5: Why Choose Endroid &amp; Testimonials -->
-    <article>
-      <h2>Why Choose Endroid by Mudasir Wazir? 100% Satisfaction Guaranteed</h2>
-      <p>Endroid stands out among Pakistani web development agencies for its unwavering commitment to quality, transparency, and user delight. Here is why clients consistently choose Endroid for their digital needs:</p>
-      <ul>
-        <li><strong>Expertise in Material You 3:</strong> Endroid is a pioneer in implementing Google's Material You 3 design system in Pakistan, delivering visually stunning and highly adaptive interfaces.</li>
-        <li><strong>Open-Source Philosophy:</strong> All Endroid projects are open-source, reflecting the brand's commitment to community growth and knowledge sharing.</li>
-        <li><strong>Client-Centric Approach:</strong> Mudasir Wazir works closely with clients to understand their vision, ensuring the final product exceeds expectations.</li>
-        <li><strong>Affordable Pricing:</strong> Endroid offers premium development services at competitive rates, making top-tier web solutions accessible to businesses of all sizes.</li>
-        <li><strong>Global Reach, Local Roots:</strong> Based in Rahim Yar Khan, Punjab, Endroid understands the local market while adhering to global standards.</li>
-      </ul>
-      <p><strong>Testimonial:</strong> "Working with Mudasir Wazir and Endroid was a game-changer for our business. Their attention to detail and technical expertise are unmatched. Highly recommended!" – Satisfied Client from Lahore, Pakistan.</p>
-    </article>
-
-    <!-- ARTICLE 6: Contact and Location (Rahim Yar Khan, Punjab) -->
-    <article>
-      <h2>Contact Endroid – Based in Rahim Yar Khan, Serving Pakistan and the World</h2>
-      <p>Endroid is headquartered in the heart of Punjab, Pakistan, in the vibrant city of Rahim Yar Khan. From this strategic location, Mudasir Wazir manages a thriving software development practice that serves a diverse clientele across the globe.</p>
-      <p>Whether you are in Rahim Yar Khan, Faisalabad, Lahore, Islamabad, Karachi, or anywhere else in the world, Endroid is ready to assist you with your web development needs. We operate remotely and are always available for consultation.</p>
-      <p><strong>Contact Details:</strong></p>
-      <ul>
-        <li><strong>Phone:</strong> <a href="tel:+923073477752">+92-307-3477752</a></li>
-        <li><strong>Email:</strong> <a href="mailto:hello@endroid.zone.id">hello@endroid.zone.id</a></li>
-        <li><strong>Website:</strong> <a href="https://endroid.zone.id/">https://endroid.zone.id/</a></li>
-        <li><strong>Location:</strong> Rahim Yar Khan, Punjab, Pakistan.</li>
-      </ul>
-      <p>Looking for the best web developer in Rahim Yar Khan or a top-notch SEO expert in Punjab? Reach out to Mudasir Wazir at Endroid today and take your digital presence to the next level. We are here to help you build, scale, and succeed online.</p>
-    </article>
-  </div>
-  <!-- ===== END HIDDEN SEO FLOOD ===== -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="/shared/endroid.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Project Endroid",
+        "url": "https://endroid.zone.id/",
+        "logo": "https://endroid.zone.id/icons/icon-512x512.png",
+        "founder": {
+          "@type": "Person",
+          "name": "Mudasir Wazir",
+          "url": "https://github.com/wized2",
+          "homeLocation": {
+            "@type": "Place",
+            "name": "Rahim Yar Khan, Punjab, Pakistan"
+          }
+        },
+        "sameAs": [
+          "https://github.com/wized2",
+          "https://endroid.pages.dev/",
+          "https://wized2.github.io/Endroid/",
+          "https://get-fern.vercel.app/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "name": "Endroid",
+        "url": "https://endroid.zone.id/",
+        "publisher": { "@type": "Organization", "name": "Project Endroid" }
+      },
+      {
+        "@type": "Person",
+        "name": "Mudasir Wazir",
+        "alternateName": ["Mudsir Wazir", "wized2"],
+        "url": "https://github.com/wized2",
+        "jobTitle": "Independent FOSS developer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Rahim Yar Khan",
+          "addressRegion": "Punjab",
+          "addressCountry": "PK"
+        },
+        "sameAs": ["https://github.com/wized2"]
+      }
+    ]
+  }
+  </script>
   <style>
-    /* ----- RESET & BASE (Material You 3 Expressive) ----- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 2.5rem 1.25rem 3rem; }
+    .badge {
+      display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase; color: var(--e-accent); margin-bottom: .75rem;
     }
-
-    :root {
-      /* Dynamic colour – Milky Blue Expressive palette */
-      --md-primary: #7CB9E8;
-      --md-on-primary: #0F1621;
-      --md-primary-container: #1A2A3A;
-      --md-secondary: #B0E0E6;
-      --md-tertiary: #89CFF0;
-      --md-surface: #0F1621;
-      --md-surface-container: #1A2332;
-      --md-surface-container-high: #243143;
-      --md-on-surface: #E6F0FF;
-      --md-outline: rgba(124, 185, 232, 0.4);
-      --md-shadow: rgba(12, 20, 31, 0.6);
-
-      /* Glassmorphism */
-      --glass-bg: rgba(26, 35, 50, 0.65);
-      --glass-border: rgba(124, 185, 232, 0.15);
-      --glass-blur: 20px;
-
-      /* Typography */
-      --font-display: 'Montserrat', sans-serif;
-      --font-body: 'Inter', sans-serif;
-
-      /* Motion */
-      --spring-ease: cubic-bezier(0.34, 1.56, 0.64, 1);
-      --smooth-ease: cubic-bezier(0.2, 0, 0, 1);
-      --bounce-ease: cubic-bezier(0.18, 0.89, 0.32, 1.28);
-
-      /* Toggle Switch */
-      --toggle-track-bg: #2A2A3A;
-      --toggle-border: #3A3A4A;
-    }
-
-    [data-theme="light"] {
-      --md-primary: #5D8AA8;
-      --md-on-primary: #FFFFFF;
-      --md-primary-container: #D4E8F5;
-      --md-secondary: #7CB9E8;
-      --md-tertiary: #B0E0E6;
-      --md-surface: #F8FBFF;
-      --md-surface-container: #FFFFFF;
-      --md-surface-container-high: #F0F7FF;
-      --md-on-surface: #1A365D;
-      --md-outline: rgba(93, 138, 168, 0.3);
-      --md-shadow: rgba(124, 185, 232, 0.15);
-      --glass-bg: rgba(255, 255, 255, 0.75);
-      --glass-border: rgba(124, 185, 232, 0.2);
-      --toggle-track-bg: #E8E4F0;
-      --toggle-border: #D0C8E0;
-    }
-
-    body {
-      font-family: var(--font-body);
-      background: var(--md-surface);
-      color: var(--md-on-surface);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      transition: background 0.5s var(--smooth-ease), color 0.5s var(--smooth-ease);
-      overflow-x: hidden;
-      background-image:
-        radial-gradient(circle at 10% 20%, rgba(124, 185, 232, 0.06) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(93, 138, 168, 0.06) 0%, transparent 40%);
-    }
-
-    [data-theme="light"] body {
-      background-image:
-        radial-gradient(circle at 10% 20%, rgba(124, 185, 232, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(176, 224, 230, 0.08) 0%, transparent 40%);
-    }
-
-    /* ----- SCROLLBAR (Expressive) ----- */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: var(--md-surface-container);
-      border-radius: 12px;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: linear-gradient(180deg, var(--md-primary), var(--md-tertiary));
-      border-radius: 12px;
-      border: 2px solid var(--md-surface-container);
-    }
-
-    /* ----- ORBITAL BACKGROUND (shape‑morph inspired) ----- */
-    .orbital-bg {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
-    .orbital-bg .blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.12;
-      animation: blobFloat 20s infinite alternate ease-in-out;
-      will-change: transform;
-    }
-    .orbital-bg .blob:nth-child(1) {
-      width: 500px;
-      height: 500px;
-      top: -10%;
-      left: -10%;
-      background: var(--md-primary);
-      animation-duration: 25s;
-    }
-    .orbital-bg .blob:nth-child(2) {
-      width: 400px;
-      height: 400px;
-      bottom: -10%;
-      right: -10%;
-      background: var(--md-tertiary);
-      animation-duration: 30s;
-      animation-delay: -5s;
-    }
-    .orbital-bg .blob:nth-child(3) {
-      width: 300px;
-      height: 300px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: var(--md-secondary);
-      animation-duration: 35s;
-      animation-delay: -10s;
-    }
-
-    @keyframes blobFloat {
-      0% {
-        transform: translate(0, 0) scale(1) rotate(0deg);
-      }
-      33% {
-        transform: translate(60px, -40px) scale(1.1) rotate(120deg);
-      }
-      66% {
-        transform: translate(-30px, 50px) scale(0.9) rotate(240deg);
-      }
-      100% {
-        transform: translate(20px, -20px) scale(1.05) rotate(360deg);
-      }
-    }
-
-    /* ----- HEADER (Frosted Glass + Expressive) ----- */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--glass-bg);
-      backdrop-filter: blur(var(--glass-blur));
-      -webkit-backdrop-filter: blur(var(--glass-blur));
-      padding: 18px 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid var(--glass-border);
-      box-shadow: 0 4px 30px var(--md-shadow);
-      transition: all 0.4s var(--smooth-ease);
-    }
-
-    .header-brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-family: var(--font-display);
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-    .header-brand .gradient-text {
-      background: linear-gradient(135deg, var(--md-primary), var(--md-tertiary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    /* ============================================================
-       MATERIAL YOU 3 TOGGLE SWITCH (Android M3 style)
-       ============================================================ */
-    .theme-toggle {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-    }
-    .switch-track {
-      width: 52px;
-      height: 32px;
-      border-radius: 16px;
-      background: var(--toggle-track-bg);
-      border: 1.5px solid var(--toggle-border);
-      position: relative;
-      transition: background 0.3s var(--smooth-ease), border-color 0.3s var(--smooth-ease);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 4px;
-      box-sizing: border-box;
-      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.05);
-    }
-    /* Icons on the track (sun left, moon right) */
-    .track-icon {
-      width: 18px;
-      height: 18px;
-      color: var(--md-on-surface);
-      opacity: 0.3;
-      z-index: 1;
-      transition: opacity 0.3s var(--smooth-ease), color 0.3s var(--smooth-ease);
-      stroke-width: 2;
-      pointer-events: none;
-    }
-    /* Highlight the active side's icon */
-    [data-theme="dark"] .sun-icon {
-      opacity: 0.15;
-    }
-    [data-theme="dark"] .moon-icon {
-      opacity: 0.9;
-      color: var(--md-primary);
-    }
-    [data-theme="light"] .sun-icon {
-      opacity: 0.9;
-      color: var(--md-primary);
-    }
-    [data-theme="light"] .moon-icon {
-      opacity: 0.15;
-    }
-
-    /* The sliding thumb */
-    .switch-thumb {
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background: var(--md-surface);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
-      transition: left 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s var(--smooth-ease);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 2;
-      will-change: left;
-    }
-    .switch-thumb i {
-      width: 16px;
-      height: 16px;
-      color: var(--md-primary);
-      stroke-width: 2.5;
-      transition: color 0.3s var(--smooth-ease);
-    }
-
-    /* Light mode: thumb slides to the right, track becomes primary */
-    [data-theme="light"] .switch-thumb {
-      left: calc(100% - 28px);
-    }
-    [data-theme="light"] .switch-track {
-      background: var(--md-primary);
-      border-color: var(--md-primary);
-    }
-    [data-theme="light"] .switch-thumb i {
-      color: #fff;
-    }
-
-    /* Dark mode: thumb stays left, thumb icon is primary */
-    [data-theme="dark"] .switch-thumb i {
-      color: var(--md-primary);
-    }
-
-    /* Hover / active feedback */
-    .theme-toggle:hover .switch-thumb {
-      box-shadow: 0 2px 12px rgba(114, 81, 164, 0.3);
-    }
-    .theme-toggle:active .switch-thumb {
-      transform: scale(0.92);
-      transition: transform 0.15s var(--smooth-ease);
-    }
-    [data-theme="light"] .theme-toggle:active .switch-thumb {
-      transform: scale(0.92);
-    }
-
-    /* ----- MAIN LAYOUT ----- */
-    .main-container {
-      flex: 1;
-      position: relative;
-      z-index: 1;
-      max-width: 1280px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 40px 28px 60px;
-    }
-
-    /* ----- WELCOME (Expressive) ----- */
-    .welcome-section {
-      text-align: center;
-      margin-bottom: 48px;
-      padding: 20px 0;
-    }
-    .welcome-section h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 6vw, 4rem);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      background: linear-gradient(135deg, var(--md-primary), var(--md-tertiary), var(--md-secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      background-size: 200% 200%;
-      animation: shimmerGradient 6s ease-in-out infinite alternate;
-    }
-    @keyframes shimmerGradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      100% {
-        background-position: 100% 50%;
-      }
-    }
-    .welcome-section .welcome-subtitle {
-      font-size: 1.15rem;
-      max-width: 600px;
-      margin: 16px auto 0;
-      opacity: 0.8;
-      font-weight: 400;
-      letter-spacing: 0.01em;
-    }
-
-    /* ----- CARDS GRID (Expressive + Glassmorphism) ----- */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 28px;
-    }
-
-    /* ---- Project Card (shape‑morph hover, spring physics) ---- */
-    .project-card {
-      background: var(--glass-bg);
-      backdrop-filter: blur(var(--glass-blur));
-      -webkit-backdrop-filter: blur(var(--glass-blur));
-      border-radius: 32px;
-      padding: 28px 24px 24px;
-      border: 1px solid var(--glass-border);
-      box-shadow: 0 8px 32px var(--md-shadow);
-      transition: all 0.5s var(--spring-ease);
-      position: relative;
-      overflow: hidden;
-      cursor: default;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Morphing accent bar */
-    .project-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--md-primary), var(--md-tertiary), var(--md-secondary));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.6s var(--spring-ease);
-      border-radius: 0 0 4px 4px;
-    }
-    .project-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    /* Shape‑morph hover effect – card lifts and morphs */
-    .project-card:hover {
-      transform: translateY(-8px) scale(1.015);
-      box-shadow: 0 24px 60px var(--md-shadow), 0 0 40px rgba(124, 185, 232, 0.08);
-      border-color: var(--md-primary);
-      border-radius: 36px;
-    }
-
-    /* Card icon – Lucide rounded */
-    .card-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, var(--md-primary), var(--md-tertiary));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      transition: all 0.5s var(--spring-ease);
-      box-shadow: 0 8px 24px rgba(124, 185, 232, 0.2);
-      flex-shrink: 0;
-    }
-    .card-icon i {
-      width: 32px;
-      height: 32px;
-      color: var(--md-on-primary);
-      stroke-width: 1.8;
-    }
-    .project-card:hover .card-icon {
-      transform: rotate(12deg) scale(1.08);
-      box-shadow: 0 12px 36px rgba(124, 185, 232, 0.35);
-    }
-
-    .card-title {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-      color: var(--md-on-surface);
-      transition: color 0.3s var(--smooth-ease);
-    }
-    .project-card:hover .card-title {
-      color: var(--md-primary);
-    }
-
-    .card-desc {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      opacity: 0.8;
-      margin-bottom: 22px;
-      flex: 1;
-    }
-
-    /* ---- Expressive Button (spring‑driven) ---- */
-    .card-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 14px 20px;
-      border-radius: 16px;
-      border: none;
-      background: linear-gradient(135deg, var(--md-primary), var(--md-secondary));
-      color: var(--md-on-primary);
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      font-weight: 500;
-      cursor: pointer;
+    h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); letter-spacing: -.03em; margin: 0 0 .75rem; line-height: 1.08; }
+    .lead { color: var(--e-muted); font-size: 1.15rem; max-width: 36rem; }
+    .row { display: flex; flex-wrap: wrap; gap: .7rem; margin: 1.75rem 0 2.5rem; }
+    .btn {
+      display: inline-flex; padding: .8rem 1.25rem; border-radius: 999px; font-weight: 600;
       text-decoration: none;
-      transition: all 0.4s var(--spring-ease);
-      position: relative;
-      overflow: hidden;
     }
-    .card-btn i {
-      width: 20px;
-      height: 20px;
-      stroke-width: 2;
-      transition: transform 0.4s var(--spring-ease);
+    .btn-p { background: var(--e-primary); color: #0b1020; }
+    .btn-g { border: 1px solid color-mix(in srgb, var(--e-muted) 40%, transparent); color: var(--e-fg); }
+    h2 { font-size: 1.15rem; margin: 2rem 0 1rem; }
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .card {
+      background: var(--e-surface); border: 1px solid color-mix(in srgb, var(--e-muted) 18%, transparent);
+      border-radius: 16px; padding: 1.1rem 1.15rem; text-decoration: none; color: inherit;
+      transition: transform .2s ease, box-shadow .2s ease;
     }
-    .card-btn:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 12px 32px rgba(124, 185, 232, 0.35);
+    .card:hover { transform: translateY(-3px); box-shadow: var(--e-shadow); }
+    .card h3 { margin: 0 0 .35rem; font-size: 1rem; }
+    .card p { margin: 0; color: var(--e-muted); font-size: .9rem; }
+    .split {
+      display: grid; gap: 1rem; grid-template-columns: 1fr;
     }
-    .card-btn:hover i {
-      transform: translateX(4px) scale(1.1);
+    @media (min-width: 720px) {
+      .split { grid-template-columns: 1.2fr .8fr; }
     }
-    .card-btn:active {
-      transform: scale(0.96);
+    .panel {
+      background: var(--e-surface); border-radius: 16px; padding: 1.25rem;
+      border: 1px solid color-mix(in srgb, var(--e-muted) 18%, transparent);
+      color: var(--e-muted); font-size: .95rem;
     }
-
-    /* Shimmer overlay on button */
-    .card-btn::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -60%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
-      transform: rotate(25deg);
-      transition: left 0.8s var(--smooth-ease);
-    }
-    .card-btn:hover::after {
-      left: 60%;
-    }
-
-    /* ----- FOOTER (Expressive) ----- */
-    footer {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 28px 24px;
-      font-size: 0.9rem;
-      border-top: 1px solid var(--glass-border);
-      background: var(--glass-bg);
-      backdrop-filter: blur(var(--glass-blur));
-      -webkit-backdrop-filter: blur(var(--glass-blur));
-      margin-top: auto;
-    }
-    footer a {
-      color: var(--md-primary);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s var(--smooth-ease);
-      position: relative;
-    }
-    footer a::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--md-primary);
-      transition: width 0.4s var(--spring-ease);
-    }
-    footer a:hover {
-      color: var(--md-tertiary);
-    }
-    footer a:hover::after {
-      width: 100%;
-    }
-
-    /* ----- RESPONSIVE ----- */
-    @media (max-width: 768px) {
-      header {
-        padding: 14px 18px;
-      }
-      .header-brand {
-        font-size: 1.2rem;
-        gap: 10px;
-      }
-      .switch-track {
-        width: 44px;
-        height: 28px;
-      }
-      .switch-thumb {
-        width: 22px;
-        height: 22px;
-        top: 2px;
-        left: 2px;
-      }
-      .switch-thumb i {
-        width: 14px;
-        height: 14px;
-      }
-      .track-icon {
-        width: 15px;
-        height: 15px;
-      }
-      [data-theme="light"] .switch-thumb {
-        left: calc(100% - 24px);
-      }
-      .main-container {
-        padding: 24px 16px 40px;
-      }
-      .cards-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-      .project-card {
-        padding: 22px 18px 20px;
-        border-radius: 28px;
-      }
-      .card-icon {
-        width: 50px;
-        height: 50px;
-      }
-      .card-icon i {
-        width: 26px;
-        height: 26px;
-      }
-      .welcome-section h1 {
-        font-size: 2rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .header-brand {
-        font-size: 1rem;
-      }
-      .header-actions {
-        gap: 10px;
-      }
-      .switch-track {
-        width: 40px;
-        height: 24px;
-        padding: 0 3px;
-      }
-      .switch-thumb {
-        width: 18px;
-        height: 18px;
-        top: 2px;
-        left: 2px;
-      }
-      .switch-thumb i {
-        width: 12px;
-        height: 12px;
-      }
-      .track-icon {
-        width: 12px;
-        height: 12px;
-      }
-      [data-theme="light"] .switch-thumb {
-        left: calc(100% - 20px);
-      }
-    }
+    .panel strong { color: var(--e-fg); }
   </style>
 </head>
-
-<body data-theme="dark">
-
-  <!-- ORBITAL BACKGROUND -->
-  <div class="orbital-bg" aria-hidden="true">
-    <div class="blob"></div>
-    <div class="blob"></div>
-    <div class="blob"></div>
-  </div>
-
-  <!-- HEADER -->
-  <header>
-    <div class="header-brand">
-      <span class="gradient-text">Endroid Dashboard</span>
-    </div>
-    <div class="header-actions">
-      <!-- MATERIAL YOU 3 TOGGLE SWITCH -->
-      <div class="theme-toggle" id="themeToggle" role="button" tabindex="0" aria-label="Toggle theme">
-        <div class="switch-track">
-          <i data-lucide="sun" class="track-icon sun-icon"></i>
-          <div class="switch-thumb">
-            <i data-lucide="moon" id="thumbIcon"></i>
-          </div>
-          <i data-lucide="moon" class="track-icon moon-icon"></i>
-        </div>
-      </div>
-    </div>
+<body class="e-shell">
+  <header class="e-topbar">
+    <a class="e-brand" href="/">Project <span>Endroid</span></a>
+    <nav>
+      <a href="https://endroid.pages.dev/">Dash</a>
+      <a href="https://endroid.pages.dev/#android">Android</a>
+      <a href="https://github.com/wized2">GitHub</a>
+    </nav>
   </header>
 
-  <!-- MAIN -->
-  <main class="main-container">
-    <!-- Welcome -->
-    <section class="welcome-section">
-      <h1>Welcome to Endroid</h1>
-      <p class="welcome-subtitle">Experience modern design with Material You 3, expressive animations, and eye-catching visual effects across all our projects.</p>
-    </section>
+  <main class="wrap">
+    <div class="badge">FOSS · Material-inspired · Pakistan</div>
+    <h1>Build useful software. Keep it open.</h1>
+    <p class="lead">
+      Endroid is the brand behind free web tools, games, and Android apps by
+      <strong>Mudasir Wazir</strong> — designed with a consistent look, practical logic, and respect for user privacy.
+    </p>
+    <div class="row">
+      <a class="btn btn-p" href="https://endroid.pages.dev/">Open Endroid Dash</a>
+      <a class="btn btn-g" href="https://get-fern.vercel.app/">Fern for Android</a>
+      <a class="btn btn-g" href="https://wized2.github.io/Ai/">Endroid AI</a>
+    </div>
 
-    <!-- Cards Grid -->
-    <div class="cards-grid">
-
-      <!-- 1. Endroid Elyx AI -->
-      <div class="project-card">
-        <div class="card-icon"><i data-lucide="bot"></i></div>
-        <div class="card-title">Endroid Elyx</div>
-        <div class="card-desc">A free and Open-Source Ai powered by Gemini, with Material You 3 Expressive theme, icons, and seamless dark/light themes.</div>
-        <a href="https://wized2.github.io/Ai/" class="card-btn">
-          <i data-lucide="rocket"></i> Launch Elyx AI
-        </a>
+    <div class="split">
+      <div class="panel">
+        <p><strong>Who</strong> — Mudasir Wazir (<code>wized2</code>), independent developer in Rahim Yar Khan, Punjab, Pakistan. Continuing the Project Endroid legacy after earlier accounts.</p>
+        <p><strong>What</strong> — Dash tools (Search, Calculator, Clock, Base64, Maze, HTML), AI chat, and Android apps: Fern, CodeCanvas, Class 8, D-Harness.</p>
+        <p><strong>How</strong> — Prefer vanilla web or lean Kotlin/Compose, offline-first when possible, MIT unless a repo says otherwise.</p>
       </div>
-
-      <!-- 2. Endroid Search -->
-      <div class="project-card">
-        <div class="card-icon"><i data-lucide="search"></i></div>
-        <div class="card-title">Endroid Search</div>
-        <div class="card-desc">A modern, customizable search engine with seamless browsing experience.</div>
-        <a href="https://endroid.pages.dev/Search/" class="card-btn">
-          <i data-lucide="compass"></i> Explore Search
-        </a>
+      <div class="panel">
+        <p><strong>Official surfaces</strong></p>
+        <p>Dash · <a href="https://endroid.pages.dev/">endroid.pages.dev</a></p>
+        <p>Brand · <a href="https://endroid.zone.id/">endroid.zone.id</a></p>
+        <p>Code · <a href="https://github.com/wized2">github.com/wized2</a></p>
       </div>
+    </div>
 
-      <!-- 3. Endroid Base64 -->
-      <div class="project-card">
-        <div class="card-icon"><i data-lucide="shield"></i></div>
-        <div class="card-title">Endroid Base64</div>
-        <div class="card-desc">Endroid Base64 | Secure Local Encoding Tool.100% local Base64 encoder/decoder. No data leaves your browser.</div>
-        <a href="https://endroid.pages.dev/Base64/" class="card-btn">
-          <i data-lucide="lock"></i> Open Base64
-        </a>
-      </div>
-
-      <!-- 4. Endroid Clock -->
-      <div class="project-card">
-        <div class="card-icon"><i data-lucide="clock"></i></div>
-        <div class="card-title">Endroid Clock</div>
-        <div class="card-desc">An interactive analog and digital clock app with Material You dynamic theming.</div>
-        <a href="https://endroid.pages.dev/Clock/" class="card-btn">
-          <i data-lucide="timer"></i> Check Time
-        </a>
-      </div>
-
-      <!-- 5. Endroid Notes -->
-      <div class="project-card">
-        <div class="card-icon"><i data-lucide="sticky-note"></i></div>
-        <div class="card-title">Endroid Notes</div>
-        <div class="card-desc">A beautiful offline notes app with rich text editing, swipe-to-delete and auto-save.</div>
-        <a href="https://endroid.pages.dev/Notes/" class="card-btn">
-          <i data-lucide="pencil"></i> Take Notes
-        </a>
-      </div>
-
-      <!-- 6. Endroid Calculator -->
-      <div class="project-card">
-        <div class="card-icon"><i data-lucide="calculator"></i></div>
-        <div class="card-title">Endroid Calculator</div>
-        <div class="card-desc">Calculator app with Material You 3 expressive animations and theme.</div>
-        <a href="https://endroid.pages.dev/Calculator/" class="card-btn">
-          <i data-lucide="equal"></i> Start Calculating
-        </a>
-      </div>
-
-      <!-- 7. Endroid Maze -->
-      <div class="project-card">
-        <div class="card-icon"><i data-lucide="gamepad-2"></i></div>
-        <div class="card-title">Endroid Maze</div>
-        <div class="card-desc">Impressive maze game with procedurally generated levels, multiple difficulty modes, and smooth animations.</div>
-        <a href="https://endroid.pages.dev/Maze/" class="card-btn">
-          <i data-lucide="joystick"></i> Play Game
-        </a>
-      </div>
-
-      <!-- 8. Ludo Royale -->
-      <div class="project-card">
-        <div class="card-icon"><i data-lucide="dice-6"></i></div>
-        <div class="card-title">Ludo Royale</div>
-        <div class="card-desc">2–4 player Ludo with AI opponents. Roll, capture, and race to victory!</div>
-        <a href="https://endroid-ludo-royale.vercel.app/" class="card-btn">
-          <i data-lucide="trophy"></i> Play Ludo
-        </a>
-      </div>
-
-      <!-- 9. Endroid Hosting -->
-      <div class="project-card">
-        <div class="card-icon"><i data-lucide="cloud-upload"></i></div>
-        <div class="card-title">Endroid Hosting</div>
-        <div class="card-desc">Free static website hosting – upload HTML/CSS/JS or use the built‑in editor, get an instant live URL. No registration, no ads. Built by Mudasir Wazir.</div>
-        <a href="https://e-host.zone.id/" class="card-btn">
-          <i data-lucide="rocket"></i> Deploy a Site
-        </a>
-      </div>
-
-      <!-- 10. More Projects -->
-      <div class="project-card">
-        <div class="card-icon"><i data-lucide="folder-git-2"></i></div>
-        <div class="card-title">More Projects</div>
-        <div class="card-desc">Discover all our open-source projects, upcoming features, and contribute to the development on GitHub. Made with ♥️ in Pakistan</div>
-        <a href="https://github.com/Wized2" class="card-btn">
-          <i data-lucide="github"></i> View All Projects
-        </a>
-      </div>
-
+    <h2>Start here</h2>
+    <div class="grid">
+      <a class="card" href="https://endroid.pages.dev/"><h3>Endroid Dash</h3><p>All web tools and games in one structured hub.</p></a>
+      <a class="card" href="https://endroid.pages.dev/Search/"><h3>Search</h3><p>Minimal private-feeling search shell.</p></a>
+      <a class="card" href="https://get-fern.vercel.app/"><h3>Fern</h3><p>Android system pulse — CPU, RAM, thermal.</p></a>
+      <a class="card" href="https://wized2.github.io/CodeCanvas/"><h3>CodeCanvas</h3><p>Fast mobile code editor.</p></a>
     </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Endroid | All Rights Reserved | <a href="https://github.com/Wized2/Endroid">GitHub</a>
+  <footer class="e-footer">
+    <p>© 2026 Mudasir Wazir · Project Endroid · MIT where applicable</p>
+    <p><a href="https://github.com/wized2/Endroid">Source</a> · <a href="/sitemap.xml">Sitemap</a></p>
   </footer>
-
-  <!-- SCRIPTS -->
-  <script>
-    // --------------------------------------------------------------
-    // 1. LUCIDE ICONS – initialise all
-    // --------------------------------------------------------------
-    document.addEventListener('DOMContentLoaded', () => {
-      lucide.createIcons();
-      // Set initial thumb icon based on theme
-      const body = document.body;
-      const thumbIcon = document.getElementById('thumbIcon');
-      if (body.dataset.theme === 'dark') {
-        thumbIcon.setAttribute('data-lucide', 'moon');
-      } else {
-        thumbIcon.setAttribute('data-lucide', 'sun');
-      }
-      lucide.createIcons();
-    });
-
-    // --------------------------------------------------------------
-    // 2. THEME TOGGLE (Android M3 Switch)
-    // --------------------------------------------------------------
-    (function initTheme() {
-      const toggle = document.getElementById('themeToggle');
-      const thumbIcon = document.getElementById('thumbIcon');
-      const body = document.body;
-
-      // Load saved theme
-      const saved = localStorage.getItem('endroid-dashboard-theme');
-      if (saved) {
-        body.dataset.theme = saved;
-      } else {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        body.dataset.theme = prefersDark ? 'dark' : 'light';
-        localStorage.setItem('endroid-dashboard-theme', body.dataset.theme);
-      }
-      updateToggle();
-
-      // Click handler
-      toggle.addEventListener('click', () => {
-        const isDark = body.dataset.theme === 'dark';
-        const next = isDark ? 'light' : 'dark';
-        body.dataset.theme = next;
-        localStorage.setItem('endroid-dashboard-theme', next);
-        updateToggle();
-        // Haptic spring feedback
-        toggle.style.transform = 'scale(0.96)';
-        setTimeout(() => toggle.style.transform = '', 150);
-      });
-
-      // Keyboard support (Enter/Space)
-      toggle.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          toggle.click();
-        }
-      });
-
-      function updateToggle() {
-        const isDark = body.dataset.theme === 'dark';
-        // Change the icon inside the thumb
-        if (isDark) {
-          thumbIcon.setAttribute('data-lucide', 'moon');
-        } else {
-          thumbIcon.setAttribute('data-lucide', 'sun');
-        }
-        // Re-render Lucide icons to apply the change
-        lucide.createIcons();
-      }
-
-      // Listen for system theme changes
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        if (!localStorage.getItem('endroid-dashboard-theme')) {
-          body.dataset.theme = e.matches ? 'dark' : 'light';
-          updateToggle();
-        }
-      });
-    })();
-
-    // --------------------------------------------------------------
-    // 3. PARALLAX ORB (playful depth)
-    // --------------------------------------------------------------
-    (function initParallax() {
-      const blobs = document.querySelectorAll('.orbital-bg .blob');
-      document.addEventListener('mousemove', (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 20;
-        const y = (e.clientY / window.innerHeight - 0.5) * 20;
-        blobs.forEach((blob, i) => {
-          const speed = 0.02 * (i + 1);
-          blob.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
-        });
-      });
-    })();
-
-    // --------------------------------------------------------------
-    // 4. SERVICE WORKER (PWA)
-    // --------------------------------------------------------------
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(() => console.log('SW registered'))
-          .catch(() => console.log('SW registration failed'));
-      });
-    }
-  </script>
-
 </body>
 </html>
