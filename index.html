@@ -3,170 +3,96 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Endroid — Project Endroid by Mudasir Wazir | FOSS Tools, Apps & Games from Pakistan</title>
-  <meta name="description" content="Project Endroid is a free and open-source studio by Mudasir Wazir (Rahim Yar Khan, Pakistan): Material You web tools, games, Android apps (Fern, CodeCanvas, Class 8, D-Harness), and the Endroid Dash hub." />
-  <meta name="keywords" content="Endroid, Project Endroid, Mudasir Wazir, Mudsir Wazir, Rahim Yar Khan, Pakistan open source, Endroid Dash, Endroid AI, Endroid Search, Fern Android monitor, CodeCanvas editor, Class 8 homework, D-Harness, Material You 3, FOSS Pakistan, endroid.zone.id" />
+  <title>Endroid — Project Endroid by Mudasir Wazir</title>
+  <meta name="description" content="Project Endroid: FOSS web tools and Android apps by Mudasir Wazir from Rahim Yar Khan, Pakistan. Material 3 inspired, light and dark mode." />
   <meta name="author" content="Mudasir Wazir" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="theme-color" content="#0f1117" />
-  <meta name="application-name" content="Endroid" />
+  <meta name="theme-color" content="#fef7ff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#141218" media="(prefers-color-scheme: dark)" />
   <link rel="canonical" href="https://endroid.zone.id/" />
-  <link rel="alternate" hreflang="en" href="https://endroid.zone.id/" />
-  <link rel="alternate" hreflang="en" href="https://wized2.github.io/Endroid/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Endroid" />
+  <meta property="og:title" content="Endroid — FOSS tools & apps" />
+  <meta property="og:description" content="Material 3 inspired tools and Android FOSS from Project Endroid." />
   <meta property="og:url" content="https://endroid.zone.id/" />
-  <meta property="og:title" content="Endroid — FOSS tools & apps by Mudasir Wazir" />
-  <meta property="og:description" content="Material You web tools, games, and Android FOSS from Project Endroid." />
-  <meta property="og:image" content="https://endroid.zone.id/icons/icon-512x512.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Endroid — Project Endroid" />
-  <meta name="twitter:description" content="FOSS studio from Rahim Yar Khan, Pakistan." />
   <link rel="icon" href="/icons/icon-192x192.png" type="image/png" />
-  <link rel="apple-touch-icon" href="/icons/icon-180x180.png" />
   <link rel="manifest" href="/manifest.json" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link href="/shared/endroid.css" rel="stylesheet" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "name": "Project Endroid",
-        "url": "https://endroid.zone.id/",
-        "logo": "https://endroid.zone.id/icons/icon-512x512.png",
-        "founder": {
-          "@type": "Person",
-          "name": "Mudasir Wazir",
-          "url": "https://github.com/wized2",
-          "homeLocation": {
-            "@type": "Place",
-            "name": "Rahim Yar Khan, Punjab, Pakistan"
-          }
-        },
-        "sameAs": [
-          "https://github.com/wized2",
-          "https://endroid.pages.dev/",
-          "https://wized2.github.io/Endroid/",
-          "https://get-fern.vercel.app/"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "name": "Endroid",
-        "url": "https://endroid.zone.id/",
-        "publisher": { "@type": "Organization", "name": "Project Endroid" }
-      },
-      {
-        "@type": "Person",
-        "name": "Mudasir Wazir",
-        "alternateName": ["Mudsir Wazir", "wized2"],
-        "url": "https://github.com/wized2",
-        "jobTitle": "Independent FOSS developer",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Rahim Yar Khan",
-          "addressRegion": "Punjab",
-          "addressCountry": "PK"
-        },
-        "sameAs": ["https://github.com/wized2"]
-      }
-    ]
-  }
-  </script>
+  <script src="/shared/endroid.js" defer></script>
+  <script src="https://unpkg.com/lucide@0.469.0" defer></script>
   <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; }
-    .wrap { max-width: 960px; margin: 0 auto; padding: 2.5rem 1.25rem 3rem; }
-    .badge {
-      display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em;
-      text-transform: uppercase; color: var(--e-accent); margin-bottom: .75rem;
+    .wrap { max-width: 960px; margin: 0 auto; padding: 1.75rem max(1rem, env(safe-area-inset-left)) 2rem max(1rem, env(safe-area-inset-right)); }
+    .hero-glow {
+      border-radius: 28px; padding: 1.75rem 1.35rem;
+      background:
+        radial-gradient(120% 80% at 0% 0%, color-mix(in srgb, var(--md-sys-color-primary) 24%, transparent), transparent 55%),
+        var(--md-sys-color-surface-container);
     }
-    h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); letter-spacing: -.03em; margin: 0 0 .75rem; line-height: 1.08; }
-    .lead { color: var(--e-muted); font-size: 1.15rem; max-width: 36rem; }
-    .row { display: flex; flex-wrap: wrap; gap: .7rem; margin: 1.75rem 0 2.5rem; }
-    .btn {
-      display: inline-flex; padding: .8rem 1.25rem; border-radius: 999px; font-weight: 600;
-      text-decoration: none;
-    }
-    .btn-p { background: var(--e-primary); color: #0b1020; }
-    .btn-g { border: 1px solid color-mix(in srgb, var(--e-muted) 40%, transparent); color: var(--e-fg); }
-    h2 { font-size: 1.15rem; margin: 2rem 0 1rem; }
-    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
-    .card {
-      background: var(--e-surface); border: 1px solid color-mix(in srgb, var(--e-muted) 18%, transparent);
-      border-radius: 16px; padding: 1.1rem 1.15rem; text-decoration: none; color: inherit;
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .card:hover { transform: translateY(-3px); box-shadow: var(--e-shadow); }
-    .card h3 { margin: 0 0 .35rem; font-size: 1rem; }
-    .card p { margin: 0; color: var(--e-muted); font-size: .9rem; }
-    .split {
-      display: grid; gap: 1rem; grid-template-columns: 1fr;
-    }
-    @media (min-width: 720px) {
-      .split { grid-template-columns: 1.2fr .8fr; }
-    }
+    .kicker { display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--md-sys-color-primary); }
+    .kicker svg { width:14px;height:14px; }
+    h1 { font-size: clamp(1.8rem, 6vw, 2.9rem); letter-spacing:-.03em; line-height:1.1; margin:.6rem 0 .75rem; }
+    .lead { color: var(--md-sys-color-on-surface-variant); max-width: 34rem; line-height: 1.55; margin: 0; }
+    .cta-row { display:flex; flex-wrap:wrap; gap:.65rem; margin-top:1.35rem; }
     .panel {
-      background: var(--e-surface); border-radius: 16px; padding: 1.25rem;
-      border: 1px solid color-mix(in srgb, var(--e-muted) 18%, transparent);
-      color: var(--e-muted); font-size: .95rem;
+      margin-top: 1.5rem; padding: 1.15rem 1.2rem; border-radius: 16px;
+      background: var(--md-sys-color-surface-container-high);
+      color: var(--md-sys-color-on-surface-variant); line-height: 1.55;
+      box-shadow: var(--md-elevation-1);
     }
-    .panel strong { color: var(--e-fg); }
+    .panel strong { color: var(--md-sys-color-on-surface); }
   </style>
 </head>
 <body class="e-shell">
   <header class="e-topbar">
-    <a class="e-brand" href="/">Project <span>Endroid</span></a>
-    <nav>
+    <a class="e-brand" href="/"><i data-lucide="hexagon"></i> Project <span>Endroid</span></a>
+    <nav class="e-nav">
       <a href="https://endroid.pages.dev/">Dash</a>
       <a href="https://endroid.pages.dev/#android">Android</a>
       <a href="https://github.com/wized2">GitHub</a>
     </nav>
+    <div class="e-actions">
+      <button type="button" class="e-icon-btn" aria-label="Toggle theme" onclick="endroidToggleTheme()"><i data-lucide="moon" data-theme-icon></i></button>
+      <button type="button" class="e-icon-btn e-menu-btn" aria-label="Menu" onclick="endroidOpenDrawer()"><i data-lucide="menu"></i></button>
+    </div>
   </header>
-
+  <div id="e-drawer" class="e-drawer" onclick="if(event.target===this)endroidCloseDrawer()">
+    <div class="e-drawer-panel">
+      <button type="button" class="e-icon-btn" style="align-self:flex-end" onclick="endroidCloseDrawer()"><i data-lucide="x"></i></button>
+      <a href="https://endroid.pages.dev/"><i data-lucide="layout-grid"></i> Dash</a>
+      <a href="https://endroid.pages.dev/#android"><i data-lucide="smartphone"></i> Android</a>
+      <a href="https://github.com/wized2"><i data-lucide="github"></i> GitHub</a>
+    </div>
+  </div>
   <main class="wrap">
-    <div class="badge">FOSS · Material-inspired · Pakistan</div>
-    <h1>Build useful software. Keep it open.</h1>
-    <p class="lead">
-      Endroid is the brand behind free web tools, games, and Android apps by
-      <strong>Mudasir Wazir</strong> — designed with a consistent look, practical logic, and respect for user privacy.
-    </p>
-    <div class="row">
-      <a class="btn btn-p" href="https://endroid.pages.dev/">Open Endroid Dash</a>
-      <a class="btn btn-g" href="https://get-fern.vercel.app/">Fern for Android</a>
-      <a class="btn btn-g" href="https://wized2.github.io/Ai/">Endroid AI</a>
-    </div>
-
-    <div class="split">
-      <div class="panel">
-        <p><strong>Who</strong> — Mudasir Wazir (<code>wized2</code>), independent developer in Rahim Yar Khan, Punjab, Pakistan. Continuing the Project Endroid legacy after earlier accounts.</p>
-        <p><strong>What</strong> — Dash tools (Search, Calculator, Clock, Base64, Maze, HTML), AI chat, and Android apps: Fern, CodeCanvas, Class 8, D-Harness.</p>
-        <p><strong>How</strong> — Prefer vanilla web or lean Kotlin/Compose, offline-first when possible, MIT unless a repo says otherwise.</p>
-      </div>
-      <div class="panel">
-        <p><strong>Official surfaces</strong></p>
-        <p>Dash · <a href="https://endroid.pages.dev/">endroid.pages.dev</a></p>
-        <p>Brand · <a href="https://endroid.zone.id/">endroid.zone.id</a></p>
-        <p>Code · <a href="https://github.com/wized2">github.com/wized2</a></p>
+    <div class="hero-glow">
+      <div class="kicker"><i data-lucide="sparkles"></i> FOSS · Pakistan</div>
+      <h1>Build useful software. Keep it open.</h1>
+      <p class="lead">Web tools, games, and Android apps with one Material-inspired language — by Mudasir Wazir.</p>
+      <div class="cta-row">
+        <a class="e-btn e-btn-filled" href="https://endroid.pages.dev/"><i data-lucide="layout-grid"></i> Open Dash</a>
+        <a class="e-btn e-btn-tonal" href="https://get-fern.vercel.app/"><i data-lucide="leaf"></i> Fern</a>
+        <a class="e-btn e-btn-outline" href="https://wized2.github.io/Ai/"><i data-lucide="bot"></i> AI</a>
       </div>
     </div>
-
-    <h2>Start here</h2>
-    <div class="grid">
-      <a class="card" href="https://endroid.pages.dev/"><h3>Endroid Dash</h3><p>All web tools and games in one structured hub.</p></a>
-      <a class="card" href="https://endroid.pages.dev/Search/"><h3>Search</h3><p>Minimal private-feeling search shell.</p></a>
-      <a class="card" href="https://get-fern.vercel.app/"><h3>Fern</h3><p>Android system pulse — CPU, RAM, thermal.</p></a>
-      <a class="card" href="https://wized2.github.io/CodeCanvas/"><h3>CodeCanvas</h3><p>Fast mobile code editor.</p></a>
+    <div class="panel">
+      <p><strong>Who</strong> — Mudasir Wazir (wized2), Rahim Yar Khan, Punjab, Pakistan.</p>
+      <p style="margin-top:.6rem"><strong>What</strong> — Dash tools, Endroid AI, Fern, CodeCanvas, Class 8, D-Harness.</p>
+      <p style="margin-top:.6rem"><strong>How</strong> — Lean UI, offline-first when possible, MIT unless a repo says otherwise.</p>
     </div>
+    <section class="e-section" style="padding-left:0;padding-right:0;max-width:none">
+      <h2><i data-lucide="link"></i> Start here</h2>
+      <div class="e-grid">
+        <a class="e-card" href="https://endroid.pages.dev/"><div class="e-card-icon"><i data-lucide="layout-grid"></i></div><h3>Dash</h3><p>All web tools and games in one hub.</p><span class="go">Open <i data-lucide="arrow-right"></i></span></a>
+        <a class="e-card" href="https://endroid.pages.dev/Search/"><div class="e-card-icon"><i data-lucide="search"></i></div><h3>Search</h3><p>Minimal private-feeling search shell.</p><span class="go">Open <i data-lucide="arrow-right"></i></span></a>
+        <a class="e-card" href="https://get-fern.vercel.app/"><div class="e-card-icon"><i data-lucide="activity"></i></div><h3>Fern</h3><p>Android system monitor.</p><span class="go">Site <i data-lucide="arrow-right"></i></span></a>
+        <a class="e-card" href="https://wized2.github.io/CodeCanvas/"><div class="e-card-icon"><i data-lucide="file-code-2"></i></div><h3>CodeCanvas</h3><p>Mobile code editor.</p><span class="go">Site <i data-lucide="arrow-right"></i></span></a>
+      </div>
+    </section>
   </main>
-
   <footer class="e-footer">
-    <p>© 2026 Mudasir Wazir · Project Endroid · MIT where applicable</p>
+    <p>© 2026 Mudasir Wazir · Project Endroid</p>
     <p><a href="https://github.com/wized2/Endroid">Source</a> · <a href="/sitemap.xml">Sitemap</a></p>
   </footer>
+  <script>document.addEventListener('DOMContentLoaded',()=>{if(window.lucide)lucide.createIcons();});</script>
 </body>
 </html>
